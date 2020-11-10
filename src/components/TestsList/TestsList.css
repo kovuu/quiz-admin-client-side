@@ -2,3 +2,15 @@
     width: 200px;
     margin: 0 auto;
 }
+
+.test-link {
+    margin-right: 10px;
+}
+
+.buttons-block {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: 0 auto 10px;
+
+}

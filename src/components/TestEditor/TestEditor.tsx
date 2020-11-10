@@ -24,7 +24,7 @@ const TestEditor: React.FC<IProps> = ({match, setTestData}) => {
                 <Link to={`${match.url}/results`}><button className='btn'>Edit results</button></Link>
             </div>
             <Route path={`${match.path}`}  exact>
-                <p>Выберите режим</p>
+                <p>Test editor page</p>
             </Route>
             <Route path={`${match.path}/answers`} component={AnswersEditor}/>
             <Route path={`${match.path}/results`} component={ResultsEditor}/>

@@ -94,19 +94,29 @@ const ResultsEditor: React.FC<IProps> = ({results, setTestData, match}) => {
            {results.length > 0 &&
                results.map((result, index) => (
                 <div key={result.id} className='container-block'>
+                    <span title='delete result' className='delete-button' onClick={(e) => deleteResultHandle(e, result.id)}>
+                        <i className='material-icons'>clear</i>
+                    </span>
+
                     <p>{result.description}</p>
-                    <button className='btn' onClick={(e) => deleteResultHandle(e, result.id)}>Delete Result</button>
                     {result.images.map((image, index) => (
                         <div className='image-block' key={index}>
                           <img src={image.imageLink} width='200px'/>
-                          <button onClick={(e) => deleteImageHandler(e, result.id, image.id)}>Delete</button>
+                          <button className='btn red lighten-1 delete-btn' onClick={(e) => deleteImageHandler(e, result.id, image.id)}>
+                              <i className='material-icons left'>delete</i>
+                              Delete image
+                          </button>
                         </div>
                     ))}
+                    <div className='image-upload-block'>
                     {image && image.id === result.id && <img src={image?.previewImage} width='200px'/>}
-                        <input type='file' name='image' onChange={(e) => inputImageHandle(e, result.id)}/>
-
+                        <span className="btn btn-file  green lighten-1">
+                        <i className="material-icons left">cloud_upload</i>
+                        Browse
+                            <input type="file" onChange={(e) => inputImageHandle(e, result.id)}/>
+                    </span>
                     {image && image.id === result.id && <button onClick={(e) => uploadHandle(e, result.id)}>Upload</button>}
-
+                    </div>
 
                 </div>
            ))}

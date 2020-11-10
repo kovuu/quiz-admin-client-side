@@ -47,7 +47,7 @@ const TestsList: React.FC<IProps> = (props) => {
             {props.quizes && props.quizes.map((quiz) => {
                return ( <div key={quiz.id}>
                    {isEdit !== quiz.id && <>
-                        <a href={`edit/${quiz.id}`}>{quiz.name}</a>
+                        <a className='test-link' href={`edit/${quiz.id}`}>{quiz.name}</a>
                        <i className="material-icons" onClick={() => editHandler(quiz.id)}>edit</i>
                         </>
                    }
@@ -56,8 +56,10 @@ const TestsList: React.FC<IProps> = (props) => {
                    <div hidden={false} className="input-field col s6">
                          <input ref={ref} onKeyPress={(event) => keyboardHandler(event, quiz.id)} defaultValue={quiz.name} id="last_name" type="text" className="validate" placeholder={quiz.name}/>
                     </div>
-                       <button className="waves-effect waves-light btn" onClick={() => editTestNameHandler(quiz.id)}>Save</button>
-                       <button className="waves-effect waves-light btn" onClick={stopEditHandler}>Cancel</button>
+                       <div className='buttons-block'>
+                           <button className="waves-effect waves-light btn" onClick={() => editTestNameHandler(quiz.id)}>Save</button>
+                           <button className="waves-effect waves-light btn" onClick={stopEditHandler}>Cancel</button>
+                       </div>
                    </div>}
                 </div> )
                 }

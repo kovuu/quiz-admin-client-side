@@ -107,10 +107,11 @@ const AnswersEditor: React.FC<IProps> = ({questions, results, addQuestionToTest,
 
                                                                                                         />
                                                                                                         <div className='col'>
+                                                                                                            <label>Which result corresponds to the answer</label>
                                                                                                             <Field as="select" name={`questions.${index}.answers.${idx}.results`} multiple >
-                                                                                                                {results.map((result) => {
+                                                                                                                {results.map((result, index) => {
                                                                                                                     return (
-                                                                                                                        <option value={result.id}>
+                                                                                                                        <option value={result.id} key={index}>
                                                                                                                             {result.description}
                                                                                                                         </option>
                                                                                                                     )

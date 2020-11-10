@@ -1,8 +1,57 @@
 .container-block {
-    border: 1px solid black;
+    margin-bottom: 20px;
+    border-bottom: 1px darkgrey solid;
+    padding: 10px;
 }
 
 .result-form {
     margin: 0 auto;
     width: 400px;
+}
+
+.image-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    line-height: 200px;
+    align-items: center;
+}
+
+
+
+.delete-btn {
+    display: inline;
+    margin-left: 100px;
+    vertical-align: middle;
+}
+
+.image-upload-block {
+    margin-top: 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.delete-button {
+    right: 0;
+    position: absolute;
+    cursor: pointer;
 }
