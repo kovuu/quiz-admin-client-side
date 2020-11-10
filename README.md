@@ -3,6 +3,8 @@
 A editor of test React/Nodejs project used as questionnaire to collect user replies and provide the final result with pictures.
 The project also has an admin section to make CRUD operations for any question/reply
 
+![demo](./assets/demo.gif)
+
 ## Getting Started
 
 To deploy the application on a local machine, 
