@@ -1,0 +1,30 @@
+.menu-bar {
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+    background-color: orange;
+    height: 100%;
+    width: 320px;
+    padding: 15px 20px;
+    transition: left 0.3s;
+    z-index: 1000;
+}
+
+.menu-bar.hidden {
+    left: -320px;
+}
+
+.menu-toggle {
+    position: absolute;
+    left: 320px;
+    padding: 10px 15px;
+    z-index: 2000;
+    color: black;
+    top: 1em;
+    cursor: pointer;
+
+}
+
+.menu-bar.shown {
+    left: 0;
+}
