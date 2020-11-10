@@ -36,7 +36,7 @@ const MenuBar = () => {
             </label>
             <h3>Menu</h3>
 
-            <p><a href='http://localhost:3000/'  onClick={hideMenuBar}>Test List</a></p>
+            <p><a href={`${process.env.REACT_APP_CLIENT_ADDRESS}`}  onClick={hideMenuBar}>Test List</a></p>
             <p><NavLink to='/' onClick={hideMenuBar}>Editor</NavLink></p>
         </div>
     )
